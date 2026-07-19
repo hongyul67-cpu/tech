@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">자동 스크롤 리더</string>
+    <string name="service_label">자동 스크롤</string>
+    <string name="service_description">화면을 원하는 속도로 자동으로 천천히 스크롤해 소설·웹툰·문서를 손대지 않고 읽을 수 있게 도와줍니다. 다른 앱 위에 조작 패널을 띄우고, 스와이프 제스처로만 스크롤합니다.</string>
+</resources>
