@@ -20,15 +20,18 @@
 2. Gradle 동기화가 끝나면 상단의 ▶(Run)로 폰에 설치합니다.
    (폰의 개발자 옵션 → USB 디버깅 켜기 필요)
 
-명령줄로 빌드하려면 Gradle이 설치된 상태에서:
+명령줄로 빌드하려면 (Gradle wrapper가 포함돼 있어 별도 설치 불필요, JDK 17 이상 필요):
 
 ```bash
-gradle wrapper          # 최초 1회 (gradlew 생성)
-./gradlew assembleDebug # app/build/outputs/apk/debug/app-debug.apk 생성
+./gradlew assembleDebug   # app/build/outputs/apk/debug/app-debug.apk 생성
 ```
 
-> 참고: 이 저장소에는 gradle-wrapper.jar 바이너리를 넣지 않았습니다.
-> Android Studio로 열면 자동으로 처리되고, 명령줄이면 위 `gradle wrapper`가 만들어 줍니다.
+## 자동 빌드 (GitHub Actions)
+
+이 브랜치나 `main`에 푸시하면 GitHub가 클라우드에서 자동으로 디버그 APK를
+빌드합니다(`.github/workflows/build.yml`). 빌드가 끝나면 GitHub의 해당
+**Actions 실행 → Artifacts → `app-debug-apk`**에서 완성된 APK를 내려받아
+폰에 바로 설치할 수 있습니다. (로컬에 Android SDK가 없어도 됨)
 
 ## 사용 방법
 
